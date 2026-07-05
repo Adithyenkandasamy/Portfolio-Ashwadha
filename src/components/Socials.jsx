@@ -15,11 +15,11 @@ const socials = [
 
 const SocialCard = ({ index, name, link, icon }) => (
   <motion.div
-    variants={{
-      hidden: { opacity: 0, scale: 0 },
-      show: { opacity: 1, scale: 1, transition: { type: "spring", delay: index * 0.15, duration: 0.5 } },
-    }}
-    whileHover={{ scale: 1.15 }}
+    initial={{ opacity: 0, scale: 0 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ type: "spring", delay: index * 0.15, duration: 0.5 }}
+    whileHover={{ scale: 1.2 }}
+    transitionEnd={{ scale: 1 }}
     className="green-pink-gradient p-[1px] rounded-full cursor-pointer"
     onClick={() => window.open(link, "_blank")}
   >
