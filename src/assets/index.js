@@ -41,6 +41,11 @@ import mindfulaiCert from "./mindfulai-cert.png";
 import internpe1Cert from "./internpe1-cert.png";
 import internpe2Cert from "./internpe2-cert.png";
 
+import socialGithub from "./social-github.png";
+import socialLinkedin from "./social-linkedin.png";
+import socialGmail from "./social-gmail.png";
+import socialLeetcode from "./social-leetcode.png";
+
 export {
   logo,
   backend,
@@ -80,4 +85,8 @@ export {
   mindfulaiCert,
   internpe1Cert,
   internpe2Cert,
+  socialGithub,
+  socialLinkedin,
+  socialGmail,
+  socialLeetcode,
 };

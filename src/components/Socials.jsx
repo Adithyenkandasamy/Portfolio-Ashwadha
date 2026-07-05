@@ -5,31 +5,32 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { socialGithub, socialLinkedin, socialGmail, socialLeetcode } from "../assets";
 
 const socials = [
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/ashwadha-chandrasekar/",
-    icon: "bg-tertiary",
+    icon: socialLinkedin,
   },
   {
     name: "Email",
     link: "mailto:ashwadhac@gmail.com",
-    icon: "bg-tertiary",
+    icon: socialGmail,
   },
   {
     name: "GitHub",
     link: "https://github.com/ashwadhac",
-    icon: "bg-tertiary",
+    icon: socialGithub,
   },
   {
     name: "LeetCode",
     link: "https://leetcode.com/u/ashwadha_07_/",
-    icon: "bg-tertiary",
+    icon: socialLeetcode,
   },
 ];
 
-const SocialCard = ({ index, name, link }) => (
+const SocialCard = ({ index, name, link, icon }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.25, 0.75)}
     className="w-full sm:w-[250px]"
@@ -40,13 +41,18 @@ const SocialCard = ({ index, name, link }) => (
         scale: 1.1,
         speed: 450,
       }}
-      className="bg-black-200 p-8 rounded-3xl w-full flex flex-col justify-center items-center shadow-lg cursor-pointer border border-tertiary hover:border-secondary hover:shadow-secondary transition-all"
+      className="bg-black-200 p-8 rounded-3xl w-full flex flex-col justify-center items-center shadow-lg cursor-pointer border border-tertiary hover:border-secondary hover:shadow-secondary transition-all min-h-[200px]"
     >
       <div 
         onClick={() => window.open(link, "_blank")}
-        className="w-full h-full flex items-center justify-center"
+        className="w-full h-full flex flex-col items-center justify-center gap-4"
       >
-        <p className="text-white font-bold text-[24px] tracking-wider text-center">{name}</p>
+        <img 
+          src={icon} 
+          alt={name}
+          className="w-16 h-16 object-contain"
+        />
+        <p className="text-white font-bold text-[20px] tracking-wider text-center">{name}</p>
       </div>
     </Tilt>
   </motion.div>
