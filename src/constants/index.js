@@ -28,6 +28,10 @@ import {
   todolist,
   ecommerce,
   internpe,
+  mindfulai,
+  mindfulaiCert,
+  internpe1Cert,
+  internpe2Cert,
 } from "../assets";
 
 export const navLinks = [
@@ -130,19 +134,19 @@ const experiences = [
       "Developed Python-based applications.",
       "Solved real-world programming tasks to strengthen problem-solving and logical thinking skills.",
     ],
-    certificate: "https://via.placeholder.com/800x600?text=Please+save+InternPe+Certificate+in+src/assets", // Replace with your actual certificate image import
+    certificate: internpe1Cert,
   },
   {
     title: "PowerBI Intern",
     company_name: "MindfulAI",
-    icon: tesla,
+    icon: mindfulai,
     iconBg: "#E6DEDD",
     date: "December 2025",
     points: [
       "Designed interactive dashboards and reports using Power BI.",
       "Developed insightful reports to support data-driven decision-making.",
     ],
-    certificate: "https://via.placeholder.com/800x600?text=Please+save+MindfulAI+Certificate+in+src/assets", // Replace with your actual certificate image import
+    certificate: mindfulaiCert,
   },
   {
     title: "Web Development Intern",
@@ -153,6 +157,7 @@ const experiences = [
     points: [
       "Developed responsive and user-friendly web applications using modern web technologies.",
     ],
+    certificate: internpe2Cert,
   },
 ];
 

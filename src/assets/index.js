@@ -27,6 +27,7 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import internpe from "./company/internpe.png";
+import mindfulai from "./company/mindfulai.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -35,6 +36,10 @@ import calculator from "./calculator.png";
 import connectfour from "./connectfour.png";
 import todolist from "./todolist.png";
 import ecommerce from "./ecommerce.png";
+
+import mindfulaiCert from "./mindfulai-cert.png";
+import internpe1Cert from "./internpe1-cert.png";
+import internpe2Cert from "./internpe2-cert.png";
 
 export {
   logo,
@@ -64,6 +69,7 @@ export {
   starbucks,
   tesla,
   internpe,
+  mindfulai,
   carrent,
   jobit,
   tripguide,
@@ -71,4 +77,7 @@ export {
   connectfour,
   todolist,
   ecommerce,
+  mindfulaiCert,
+  internpe1Cert,
+  internpe2Cert,
 };

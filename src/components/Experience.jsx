@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { createPortal } from "react-dom";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -93,9 +94,9 @@ const Experience = () => {
         </VerticalTimeline>
       </div>
 
-      {selectedCertificate && (
+      {selectedCertificate && createPortal(
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-80"
           onClick={() => setSelectedCertificate(null)}
         >
           <div 
@@ -108,13 +109,14 @@ const Experience = () => {
               className="w-full h-auto object-contain rounded-lg shadow-2xl max-h-[85vh]"
             />
             <button 
-              className="absolute -top-4 -right-4 text-white bg-tertiary rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary text-2xl border-2 border-white"
+              className="fixed top-6 right-6 md:top-10 md:right-10 text-white bg-tertiary rounded-full w-12 h-12 flex items-center justify-center hover:bg-secondary text-2xl border-2 border-white z-[10000] shadow-xl"
               onClick={() => setSelectedCertificate(null)}
             >
               &times;
             </button>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
