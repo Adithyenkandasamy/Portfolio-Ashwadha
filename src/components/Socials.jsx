@@ -31,45 +31,45 @@ const socials = [
 ];
 
 const SocialCard = ({ index, name, link, icon }) => (
-  <motion.div
-    variants={fadeIn("", "spring", index * 0.25, 0.75)}
-    className="w-full sm:w-[250px]"
-  >
-    <Tilt
-      options={{
-        max: 25,
-        scale: 1.1,
-        speed: 450,
-      }}
-      className="bg-black-200 p-8 rounded-3xl w-full flex flex-col justify-center items-center shadow-lg cursor-pointer border border-tertiary hover:border-secondary hover:shadow-secondary transition-all min-h-[200px]"
+  <Tilt className='w-full'>
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.25, 0.75)}
+      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card cursor-pointer'
+      onClick={() => window.open(link, "_blank")}
     >
-      <div 
-        onClick={() => window.open(link, "_blank")}
-        className="w-full h-full flex flex-col items-center justify-center gap-4"
+      <div
+        options={{
+          max: 45,
+          scale: 1.05,
+          speed: 450,
+        }}
+        className='bg-tertiary rounded-[20px] py-8 px-12 min-h-[220px] flex justify-center items-center flex-col gap-4'
       >
         <img 
           src={icon} 
           alt={name}
-          className="w-16 h-16 object-contain"
+          className="w-20 h-20 object-contain"
         />
-        <p className="text-white font-bold text-[20px] tracking-wider text-center">{name}</p>
+        <h3 className='text-white text-[24px] font-bold text-center tracking-wider'>
+          {name}
+        </h3>
       </div>
-    </Tilt>
-  </motion.div>
+    </motion.div>
+  </Tilt>
 );
 
 const Socials = () => {
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px] flex flex-col justify-center`}
+        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[250px] flex flex-col justify-center`}
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>Get in touch</p>
           <h2 className={styles.sectionHeadText}>My Socials.</h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7 justify-center`}>
+      <div className={`-mt-16 pb-14 ${styles.paddingX} grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-4xl mx-auto`}>
         {socials.map((social, index) => (
           <SocialCard key={social.name} index={index} {...social} />
         ))}
