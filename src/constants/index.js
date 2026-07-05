@@ -23,6 +23,10 @@ import {
   jobit,
   tripguide,
   threejs,
+  calculator,
+  connectfour,
+  todolist,
+  ecommerce,
 } from "../assets";
 
 export const navLinks = [
@@ -42,19 +46,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Python Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Web Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Data Analyst",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "AI Enthusiast",
     icon: creator,
   },
 ];
@@ -116,55 +120,37 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Python Programming Intern",
+    company_name: "InternPe",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "June 2025 - July 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed Python-based applications.",
+      "Solved real-world programming tasks to strengthen problem-solving and logical thinking skills.",
     ],
+    certificate: "https://via.placeholder.com/800x600?text=Please+save+InternPe+Certificate+in+src/assets", // Replace with your actual certificate image import
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "PowerBI Intern",
+    company_name: "MindfulAI",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "December 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designed interactive dashboards and reports using Power BI.",
+      "Developed insightful reports to support data-driven decision-making.",
     ],
+    certificate: "https://via.placeholder.com/800x600?text=Please+save+MindfulAI+Certificate+in+src/assets", // Replace with your actual certificate image import
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "Web Development Intern",
+    company_name: "InterPe",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "June 2026",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed responsive and user-friendly web applications using modern web technologies.",
     ],
   },
 ];
@@ -198,58 +184,16 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Calculator",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A sleek, modern web-based calculator application featuring a clean interface and intuitive design for quick everyday calculations.",
     tags: [
       {
-        name: "react",
+        name: "javascript",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
+        name: "html",
         color: "green-text-gradient",
       },
       {
@@ -257,8 +201,71 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: calculator,
+    source_code_link: "https://github.com/ashwadhac/Calculator.git",
+  },
+  {
+    name: "Connect Four",
+    description:
+      "An interactive digital version of the classic Connect Four game. Play against a friend and enjoy a futuristic neon-themed board layout.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "logic",
+        color: "green-text-gradient",
+      },
+      {
+        name: "ui",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: connectfour,
+    source_code_link: "https://github.com/ashwadhac/connect-four-game.git",
+  },
+  {
+    name: "To-do List",
+    description:
+      "A clean, minimalistic To-Do list web application designed to boost productivity by helping you organize daily tasks efficiently.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: todolist,
+    source_code_link: "https://github.com/ashwadhac/To-do-list.git",
+  },
+  {
+    name: "E-commerce",
+    description:
+      "A professional, full-featured e-commerce homepage showcasing modern web design principles with a large hero section and product catalog.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: ecommerce,
+    source_code_link: "https://github.com/ashwadhac/E-commerce.git",
   },
 ];
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -12,7 +12,7 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, onClickCertificate }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -52,11 +52,24 @@ const ExperienceCard = ({ experience }) => {
           </li>
         ))}
       </ul>
+
+      {experience.certificate && (
+        <div className="mt-5">
+          <button
+            onClick={() => onClickCertificate(experience.certificate)}
+            className="bg-tertiary py-2 px-4 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-[#915EFF] transition-colors"
+          >
+            View Certificate
+          </button>
+        </div>
+      )}
     </VerticalTimelineElement>
   );
 };
 
 const Experience = () => {
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -74,10 +87,35 @@ const Experience = () => {
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              onClickCertificate={setSelectedCertificate}
             />
           ))}
         </VerticalTimeline>
       </div>
+
+      {selectedCertificate && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+          onClick={() => setSelectedCertificate(null)}
+        >
+          <div 
+            className="relative p-2 max-w-3xl w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img 
+              src={selectedCertificate} 
+              alt="Certificate" 
+              className="w-full h-auto object-contain rounded-lg shadow-2xl max-h-[85vh]"
+            />
+            <button 
+              className="absolute -top-4 -right-4 text-white bg-tertiary rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary text-2xl border-2 border-white"
+              onClick={() => setSelectedCertificate(null)}
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

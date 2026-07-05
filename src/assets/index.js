@@ -6,6 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import ashwadhaProfile from "./Ashwadha.jpeg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -29,6 +30,10 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import calculator from "./calculator.png";
+import connectfour from "./connectfour.png";
+import todolist from "./todolist.png";
+import ecommerce from "./ecommerce.png";
 
 export {
   logo,
@@ -39,6 +44,7 @@ export {
   github,
   menu,
   close,
+  ashwadhaProfile,
   css,
   docker,
   figma,
@@ -59,4 +65,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  calculator,
+  connectfour,
+  todolist,
+  ecommerce,
 };
