@@ -19,7 +19,6 @@ const SocialCard = ({ index, name, link, icon }) => (
     animate={{ opacity: 1, scale: 1 }}
     transition={{ type: "spring", delay: index * 0.15, duration: 0.5 }}
     whileHover={{ scale: 1.2 }}
-    transitionEnd={{ scale: 1 }}
     className="green-pink-gradient p-[1px] rounded-full cursor-pointer"
     onClick={() => window.open(link, "_blank")}
   >
