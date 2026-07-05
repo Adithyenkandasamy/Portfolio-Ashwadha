@@ -27,6 +27,7 @@ import {
   connectfour,
   todolist,
   ecommerce,
+  internpe,
 } from "../assets";
 
 export const navLinks = [
@@ -122,7 +123,7 @@ const experiences = [
   {
     title: "Python Programming Intern",
     company_name: "InternPe",
-    icon: starbucks,
+    icon: internpe,
     iconBg: "#383E56",
     date: "June 2025 - July 2025",
     points: [
@@ -146,7 +147,7 @@ const experiences = [
   {
     title: "Web Development Intern",
     company_name: "InterPe",
-    icon: shopify,
+    icon: internpe,
     iconBg: "#383E56",
     date: "June 2026",
     points: [
